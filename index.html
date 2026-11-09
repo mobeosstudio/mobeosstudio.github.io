@@ -3,35 +3,78 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mobeo</title>
-<meta name="description" content="Mobeo — a small independent studio making apps for knitters.">
-<style>
-  :root { --bg:#fbf8f6; --fg:#2b2326; --muted:#6d6266; --accent:#9b2c4a; }
-  @media (prefers-color-scheme: dark) { :root { --bg:#1d1a1b; --fg:#efe9eb; --muted:#b3a8ac; --accent:#e07a96; } }
-  body { margin:0; background:var(--bg); color:var(--fg); font:17px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
-  main { max-width:680px; margin:0 auto; padding:48px 16px; }
-  h1 { font-size:2.2rem; margin:0 0 4px; letter-spacing:.02em; }
-  .tag { color:var(--muted); margin:0 0 32px; }
-  a { color:var(--accent); }
-  footer { margin-top:48px; color:var(--muted); font-size:.9rem; }
-</style>
+<title>Mobeos — apps for knitters</title>
+<meta name="description" content="Mobeos is a small independent studio from Ukraine. We make Knitmetry, an app that calculates knitting patterns from your own measurements.">
+<meta name="theme-color" content="#8A2C5B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 40'%3E%3Cpath d='M32 20C24 6 6 6 6 20s18 14 26 0 26-14 26 0-18 14-26 0Z' fill='none' stroke='%238A2C5B' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main>
-  <h1>Mobeo</h1>
-  <p class="tag">A small independent studio from Ukraine.</p>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="./" aria-label="Mobeos home">
+      <svg viewBox="0 0 64 40" aria-hidden="true">
+        <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="var(--accent)"/><stop offset="1" stop-color="var(--accent)" stop-opacity=".45"/></linearGradient></defs>
+        <path d="M32 20C24 6 6 6 6 20s18 14 26 0 26-14 26 0-18 14-26 0Z" fill="none" stroke="url(#g)" stroke-width="7" stroke-linecap="round"/>
+      </svg>
+      Mobeos
+    </a>
+    <nav><a href="#knitmetry">Knitmetry</a><a href="#studio">Studio</a><a href="privacy.html">Privacy</a></nav>
+  </header>
 
-  <h2>Knitmetry</h2>
-  <p>An app for knitters: enter your body measurements and your gauge, and it calculates a pattern
-  that fits — hats, socks, sweaters and more. Your measurements stay on your phone.</p>
-  <p>Coming soon to Google Play.</p>
+  <main>
+    <div class="hero">
+      <p class="kicker">Knitmetry · coming to Google Play</p>
+      <h1>Patterns that fit <em>your</em> body.</h1>
+      <p class="lead">Enter your measurements and your gauge. Knitmetry works out every stitch and every row,
+        so the garment fits you, not a standard size chart.</p>
+      <a class="badge" href="#knitmetry">See what it does <small>→</small></a>
+    </div>
 
-  <h2>Contact</h2>
-  <p><a href="mailto:mobeos.studio@gmail.com">mobeos.studio@gmail.com</a></p>
+    <section id="knitmetry">
+      <h2 class="section-title">One app, your numbers</h2>
+      <p class="section-lead">Knitmetry is a calculator and a pattern writer in one. It is built for knitters
+        who are tired of adjusting patterns by hand.</p>
+      <div class="cards">
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v10H3z"/><path d="M7 7v4M11 7v6M15 7v4M19 7v6"/></svg></div>
+          <h3>Your measurements</h3>
+          <p>Chest, waist, arm, head, foot: whatever the garment needs. Not sure? It suggests typical values for your size.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M4 9h16M4 14h16M9 4v16M14 4v16"/></svg></div>
+          <h3>A pattern, row by row</h3>
+          <p>Clear written instructions, a schematic with sizes, a row counter and a printable PDF.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
+          <h3>Private by design</h3>
+          <p>Your measurements stay on your phone. No account, no ads, no tracking.</p>
+        </div>
+      </div>
+      <ul class="garments" aria-label="Garments">
+        <li>Beanie</li><li>Socks</li><li>Raglan sweater</li><li>Drop-shoulder sweater</li><li>Cardigan</li><li>Dress</li><li>Blanket</li>
+      </ul>
+    </section>
+
+    <section id="studio" class="studio">
+      <svg viewBox="0 0 64 40" aria-hidden="true">
+        <defs><linearGradient id="g2" x1="0" x2="1"><stop offset="0" stop-color="var(--accent)"/><stop offset="1" stop-color="var(--accent)" stop-opacity=".35"/></linearGradient></defs>
+        <path d="M32 20C24 6 6 6 6 20s18 14 26 0 26-14 26 0-18 14-26 0Z" fill="none" stroke="url(#g2)" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <h2 class="section-title">About the studio</h2>
+        <p>Mobeos is a small independent studio from Ukraine. The name comes from the Möbius strip:
+          one continuous surface, like a single strand of yarn that becomes a whole garment.</p>
+        <p>Questions, ideas or feedback: <a href="mailto:mobeos.studio@gmail.com">mobeos.studio@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <a href="privacy.html">Privacy policy</a> · © 2026 Mobeo
+    <span>© 2026 Mobeos</span>
+    <span><a href="privacy.html">Privacy policy</a> · <a href="mailto:mobeos.studio@gmail.com">Contact</a></span>
   </footer>
-</main>
+</div>
 </body>
 </html>
