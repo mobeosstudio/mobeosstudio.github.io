@@ -19,7 +19,7 @@ a { color: var(--accent); text-underline-offset: 3px; }
 .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
 
 /* шапка */
-.top { display: flex; align-items: center; justify-content: space-between; padding: 22px 0; }
+.top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 0; padding: 22px 0; }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none;
   font: 700 22px/1 var(--serif); letter-spacing: .01em; }
 .brand img { width: auto; height: 40px; display: block; }
@@ -82,6 +82,7 @@ footer a { color: var(--muted); }
   .studio { grid-template-columns: 1fr; padding: 32px 24px; }
   .studio img { max-width: 220px; }
   .doc { padding: 34px 22px; border-radius: 22px; }
-  .top nav a { margin-left: 14px; }
+  .top nav a { margin: 0 16px 0 0; }
+  .brand img { height: 32px; }
   section { margin: 60px 0; }
 }
