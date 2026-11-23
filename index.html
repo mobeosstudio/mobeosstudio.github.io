@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#8A2C5B">
 <link rel="icon" href="favicon-64.png" type="image/png" sizes="64x64">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="style.css?v=2311b">
+<link rel="stylesheet" href="style.css?v=2311c">
 </head>
 <body>
 <div class="wrap">
@@ -24,11 +24,11 @@
 
   <main>
     <div class="hero">
-      <p class="kicker">Knitmetry · coming to Google Play</p>
+      <p class="kicker">Knitmetry · now on Google Play</p>
       <h1>Patterns that fit <em>your</em> body.</h1>
       <p class="lead">Enter your measurements and your gauge. Knitmetry works out every stitch and every row,
         so the garment fits you, not a standard size chart.</p>
-      <a class="badge" href="#knitmetry">See what it does <small>→</small></a>
+      <a class="badge" href="https://play.google.com/store/apps/details?id=com.mobeos.knitmetry">Get it on Google Play <small>→</small></a>
     </div>
 
     <section id="knitmetry">
@@ -49,12 +49,28 @@
         <div class="card">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
           <h3>Private by design</h3>
-          <p>Your measurements stay on your phone unless you e-mail them to us yourself. No account. Without a subscription, a short video ad opens the calculators, size charts and the stand-alone row counter for 20 minutes; no ads in the free trial or with a subscription.</p>
+          <p>Your measurements stay on your phone unless you e-mail them to us yourself. No account. No ads. Without a subscription, the calculators, size charts, lessons and the stand-alone row counter are free.</p>
         </div>
       </div>
       <ul class="garments" aria-label="Garments">
-        <li>Beanie</li><li>Socks</li><li>Raglan sweater</li><li>Drop-shoulder sweater</li><li>Cardigan</li><li>Dress</li><li>Blanket</li>
+        <li>Hat</li><li>Socks</li><li>Mittens</li><li>Snood and cowl</li><li>Raglan sweater</li><li>Raglan cardigan</li><li>Round-yoke sweater</li><li>Drop-shoulder sweater</li><li>Vest and top</li><li>Dress</li><li>Blanket</li>
       </ul>
+    </section>
+
+    <section id="see" class="see">
+      <h2 class="section-title">See it in action</h2>
+      <div class="shots">
+      <div class="video" data-id="2t2rI2pFH64">
+        <button type="button" class="video-play" aria-label="Play the Knitmetry video (loads YouTube)">
+          <img src="media/shot-sweater.jpg" alt="" width="720" height="900" loading="lazy">
+          <span class="play-ico" aria-hidden="true">&#9654;</span>
+          <span class="video-note">Plays from YouTube</span>
+        </button>
+      </div>
+        <img src="media/shot-pattern.jpg" alt="Knitmetry result: a schematic with measurements and step-by-step instructions" width="720" height="900" loading="lazy">
+        <img src="media/shot-counter.jpg" alt="The row counter inside the pattern remembers where you stopped" width="720" height="900" loading="lazy">
+      </div>
+      <p class="section-lead"><a href="https://play.google.com/store/apps/details?id=com.mobeos.knitmetry">Knitmetry on Google Play →</a></p>
     </section>
 
     <section id="studio" class="studio">
@@ -73,5 +89,15 @@
     <span><a href="privacy.html">Privacy policy</a> · <a href="mailto:mobeos.studio@gmail.com">Contact</a></span>
   </footer>
 </div>
+<script>
+document.querySelectorAll('.video').forEach(function (v) {
+  v.querySelector('.video-play').addEventListener('click', function () {
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + v.dataset.id + '?autoplay=1&rel=0';
+    f.title = 'Knitmetry video'; f.allow = 'autoplay; encrypted-media; picture-in-picture'; f.allowFullscreen = true;
+    v.innerHTML = ''; v.appendChild(f);
+  });
+});
+</script>
 </body>
 </html>
